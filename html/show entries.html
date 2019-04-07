@@ -1,0 +1,48 @@
+<html>
+<style>
+li {
+  border-style: solid;
+  padding: 20px;
+}
+</style>
+<script>
+    let username = "testUserName@testdomain.com"
+    let domain = 'testDomain.com'
+    let security_lvl = 2
+    let ids = [{'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl},
+      {'domain' : domain, 'username' : username, 'security_level' : security_lvl}];
+
+          function showList(){
+            let listContainer = document.getElementById("list");
+            let html = "";
+
+            html = "<ul>";
+            for(var id of ids) {
+              html += "<li>";
+              html += "Domain: " + id.domain + " | ";
+              html += "Username: " + id.username + " | ";
+              html += "Security Level: " + id.security_level;
+              html += "&nbsp;<select><option value=0>On Premise</option><option value='1'>Google Drive</option><option value='2'>Blockchain</option></select>"
+
+                html += "</li>";
+            }
+
+                        html += "</ul>";
+
+            listContainer.innerHTML = html;
+    }
+</script>
+<body onload="showList()">
+<div id="list">
+</div>
+<button type="button" name="button" id="button"></button>
+<!-- <button onclick="showList()">Show</button> -->
+</body>
+</html>

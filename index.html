@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <div>
+        <a href="./html/show entries.html" target="display">page1</a>
+        <a href="" target="display">page2</a>
+    </div>
+    <div>
+      <h1 id="heading">Hello</h1>
+       <iframe src="" height=900 width=800 name="display"></iframe>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const backend = require('./backend/backendController.js')
+    var ids = backend.getIds();
+  </script>
+</html>
